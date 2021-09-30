@@ -1,0 +1,7 @@
+class Solution:
+    def solve(self, nums):
+        diff = 0
+        nums = sorted(nums)
+        for i in range(1, len(nums)):
+            diff = max(diff, abs(nums[i - 1] - nums[i]))
+        return diff
